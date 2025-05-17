@@ -8,6 +8,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilização do formulário  */
+
 .form-container {
   background-color: #fff;
   padding: 20px;
@@ -31,7 +33,10 @@ label {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  margin-bottom: 10px ;
 }
+
+/* Estilização do Botão de verificar */
 
 .form-container button {
   background-color: #007bff;
@@ -47,6 +52,8 @@ label {
 .form-container button:hover {
   background-color: #2a9fd6;
 }
+
+/* Estilização da mensagem  */
 
 .message {
   padding: 10px;
