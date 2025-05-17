@@ -44,11 +44,11 @@ document.getElementById("cpfForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const cpfInput = document.getElementById("cpf").value;
-  const messageDiv = document.getElementById("message").value;
+  const messageDiv = document.getElementById("message");
 
   if (validarCPF(cpfInput)) {
     messageDiv.textContent = "CPF Válido";
-    messageDiv.classname = "message erro";
+    messageDiv.classname = "message sucess";
   } else {
     messageDiv.textContent = "CPF Inválido";
     messageDiv.classname = "message erro";
