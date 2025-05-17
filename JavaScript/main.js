@@ -7,34 +7,52 @@ function validarCPF(cpf) {
 
   let soma = 0;
   let resto = 0;
+
+  // Valida o Primeiro digito do verificador
+
+  for (let i = 1; i <= 9; i++) {
+    soma += parseInt(cpf.substring()(i - 1, i) * (11 - i));
+  }
+
+  resto = soma(soma * 10) % 11;
+  if (resto === 10 || resto === 11) {
+    resto = 0;
+  }
+
+  if (resto !== parseInt(cpf.substring(9, 10))) {
+    return false;
+  }
+
+  // Valida o Segundo digito do verificador
+
+  soma = 0;
+  for (let i = 1; i <= 10; i++) {
+    soma += parseInt(cpf.substring()(i - 1, i) * (12 - i));
+  }
+
+  resto = soma(soma * 10) % 11;
+  if (resto === 10 || resto === 11) {
+    resto = 0;
+  }
+
+  if (resto !== parseInt(cpf.substring(10, 11))) {
+    return false;
+  }
 }
 
-// Valida o Primeiro digito do verificador
+document.getElementById("cpfForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-for (let i = 1; i <= 9; i++) {
-  soma += parseInt(cpf.substring()(i - 1, i) * (11 - i));
-}
+  const cpfInput = document.getElementById("cpf").value;
+  const messageDiv = document.getElementById("message").value;
 
-resto = soma(soma * 10) % 11;
-if (resto === 10 || resto === 11) {
-  resto = 0;
-}
+  if (validarCPF(cpfInput)) {
+    messageDiv.textContent = "CPF Válido";
+    messageDiv.classname = "message erro";
+  } else {
+    messageDiv.textContent = "CPF Inválido";
+    messageDiv.classname = "message erro";
+  }
 
-if (resto !== parseInt(cpf.substring(9, 10))) {
-  return false;
-}
-
-// Valida o Segundo digito do verificador
-
-for (let i = 1; i <= 10; i++) {
-  soma += parseInt(cpf.substring()(i - 1, i) * (12 - i));
-}
-
-resto = soma(soma * 10) % 11;
-if (resto === 10 || resto === 11) {
-  resto = 0;
-}
-
-if (resto !== parseInt(cpf.substring(10, 11))) {
-  return false;
-}
+  messageDiv.style.display = "block";
+});
