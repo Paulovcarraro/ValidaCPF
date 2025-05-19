@@ -72,6 +72,7 @@ label {
   margin-top: 10px;
   border-radius: 10px;
   display: none;
+  font-weight: bold;
 }
 
 #message.sucess {
