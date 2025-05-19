@@ -56,3 +56,20 @@ document.getElementById("cpfForm").addEventListener("submit", function (e) {
 
   messageDiv.style.display = "block";
 });
+
+
+// Script de animação 3D do background da página
+
+VANTA.GLOBE({
+  el: "#vantaglobe",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x1e3a5f,          // Azul escuro
+  color2: 0x87a8c5,         // Azul claro
+  backgroundColor: 0xf0f4f8  // Cinza muito claro para fundo neutro
+});

@@ -8,6 +8,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilização do fundo da página com a animação Vanta.Globe */
+
+#vantaglobe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Estilização do formulário  */
 
 .form-container {
