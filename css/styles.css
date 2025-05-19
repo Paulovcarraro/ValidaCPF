@@ -77,10 +77,10 @@ label {
 
 #message.sucess {
   background-color: #d4edda;
-  color: #155724;
+  color: #0f0;
 }
 
 #message.erro {
   background-color: #f8d7da;
-  color: red;
+  color: #e63946;
 }
